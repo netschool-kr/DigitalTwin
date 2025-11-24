@@ -1,0 +1,25 @@
+[package]
+title = "Smart Warehouse Manager"
+version = "1.0.0"
+keywords = ["app", "warehouse", "digital-twin", "python"]
+category = "Simulation"
+# 앱 실행에 필요한 핵심 Extension들 나열
+# 이 목록을 kit.exe가 읽어 기능을 조립합니다.
+
+[dependencies]
+# Omniverse Core Modules
+"omni.kit.uiapp" = {}       # UI 프레임워크 및 기본 앱 기능
+"omni.usd" = {}            # USD 스테이지 관리
+"omni.physx" = {}          # 물리 시뮬레이션
+"omni.kit.viewport.core" = {} # 뷰포트 코어 기능
+
+# Custom Modules (사용자가 직접 구현하는 기능)
+"my.warehouse.setup" = {}
+"my.warehouse.mqtt_client" = {}
+"my.warehouse.dashboard" = {}
+
+[settings]
+# 앱의 기본 설정
+app.window.title = "Smart Warehouse Dashboard"
+app.window.width = 1600
+app.window.height = 900

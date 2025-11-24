@@ -1,0 +1,13 @@
+[package]
+title = "Warehouse Setup Logic"
+version = "1.0.0"
+description = "Loads the initial USD stage and sets up the environment."
+
+[dependencies]
+"omni.usd" = {} # USD 기능을 사용하므로 의존성 선언
+
+[python]
+module = "my.warehouse.setup" # my.warehouse.setup.extension 모듈을 로드하도록 지정
+
+[fswatcher] # Python 코드 핫 리로딩을 위한 설정
+patterns.include = ["*.py"]
