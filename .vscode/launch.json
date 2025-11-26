@@ -2,15 +2,8 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Current File",
+            "name": "Python: Attach to Omniverse Kit (3000)",
             "type": "debugpy",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "Python: Remote Attach (Omniverse Kit)",
-            "type": "python",
             "request": "attach",
             "connect": {
                 "host": "localhost",
@@ -19,10 +12,12 @@
             "pathMappings": [
                 {
                     "localRoot": "${workspaceFolder}",
-                    "remoteRoot": "${workspaceFolder}"
+                    "remoteRoot": "/home/samchung/DigitalTwin"
                 }
             ],
-            "justMyCode": true
+            "justMyCode": false,
+            "redirectOutput": true,
+            "showReturnValue": true
         }
     ]
 }
